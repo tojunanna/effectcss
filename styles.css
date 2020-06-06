@@ -1,0 +1,118 @@
+body{
+    width:100%;
+    height:100%;
+    margin:0;
+    overflow: hidden;
+    background: linear-gradient(45deg, rgba(126, 65, 224) 6%, rgb(0,41,60,1) 29%, rgb(76, 77, 75) 84%);
+}
+
+.container{
+  
+    width:100vw;
+    height:100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 49px;
+    animation: zooming 10s ease-in-out infinite;
+   
+}
+
+.frame{
+   
+    width:60vw;
+    height:50vh;
+    position: absolute;
+    border-radius: 50px;
+    border: 5px #50ac48 solid;
+    box-shadow: 0px 0px 20px #e27d63,
+    inset 0px 0px 20px #e27d63,
+    0px 0px 60px #bdcc39,
+    inset 0px 0px 60px #bdcc39;
+    filter:brightness(1.5) contrast(2);
+    animation: breathing 3s ease-out infinite;
+}
+
+.frame:nth-child(1) {
+    transform: rotate(40deg) translateY(5px) translateZ(-5px);
+    opacity:1.00;
+    animation-delay: 0.0s;
+}
+.frame:nth-child(2) {
+    transform: rotate(40deg) translateY(20px) translateZ(-15px);
+    opacity:0.9;
+    animation-delay: 0.3s;
+}
+.frame:nth-child(3) {
+    transform: rotate(40deg) translateY(35px) translateZ(-25px);
+    opacity:0.8;
+    animation-delay: 0.5s;
+}
+.frame:nth-child(4) {
+    transform: rotate(40deg) translateY(50px) translateZ(-35px);
+    opacity:0.80;
+    animation-delay: 0.7s;
+}
+.frame:nth-child(5) {
+    transform: rotate(40deg) translateY(65px) translateZ(-45px);
+    opacity:0.75;
+    animation-delay: 0.9s;
+}
+.frame:nth-child(6) {
+    transform: rotate(40deg) translateY(80px) translateZ(-55px);
+    opacity:0.70;
+    animation-delay: 1.1s;
+}
+.frame:nth-child(7) {
+    transform: rotate(40deg) translateY(95px) translateZ(-65px);
+    opacity:0.65;
+    animation-delay: 1.3s;
+}
+.frame:nth-child(8) {
+    transform: rotate(40deg) translateY(110px) translateZ(-75px);
+    opacity:0.6;
+    animation-delay: 1.5s;
+}
+.frame:nth-child(9) {
+    transform: rotate(40deg) translateY(125px) translateZ(-85px);
+    opacity:0.5;
+    animation-delay: 1.7s;
+}
+.frame:nth-child(10) {
+    transform: rotate(40deg) translateY(140px) translateZ(-95px);
+    opacity:0.4;
+    animation-delay: 1.9s;
+}
+.frame:nth-child(11) {
+    transform: rotate(40deg) translateY(155px) translateZ(-105px);
+    opacity:0.3;
+    animation-delay: 2.1s;
+}
+.frame:nth-child(12) {
+    transform: rotate(40deg) translateY(165px) translateZ(-115px);
+    opacity:0.2;
+    animation-delay: 2.3s;
+}
+.frame:nth-child(13) {
+    transform: rotate(40deg) translateY(175px) translateZ(-125px);
+    opacity:0.1;
+    animation-delay: 2.5s;
+}
+.frame:nth-child(14) {
+    transform: rotate(40deg) translateY(185px) translateZ(-135px);
+    opacity:0.05;
+    animation-delay: 2.7s;
+}
+
+@keyframes breathing{
+    0% {filter: brightness(1.5) contrast(3);}
+    50% {filter: brightness(1.1) contrast(2);}
+    100% {filter: brightness(1.5) contrast(3);}
+}
+
+@keyframes zooming{
+    0%{perspective: 45px;}
+    50%{perspective: 50px;}
+    100%{perspective: 45px;}
+}
